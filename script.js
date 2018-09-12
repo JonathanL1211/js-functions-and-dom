@@ -2,11 +2,14 @@
 // Write a function to flatten an array by 1 level, i.e. given an array, your function should return an array whose elements are those of the given array and its subarrays, but ignore any subarrays of subarrays. See below for the example, and complete the flatten() function.
 var testArray = [1, [2, 3], [4, [5], 6]];
 var flatten = function(arr){
-        arr = arr.reduce(function(a, b){
-        return a.concat(b);
-        },[]);
-        return arr;
+        // arr = arr.reduce(function(a, b){
+        // return a.concat(b);
+        // },[]);
+        // return arr;
+
 }
+
+
 //     var emptyArray = [];
 //     var emptyArray2 = [];
 
@@ -24,6 +27,8 @@ var flatten = function(arr){
 //         // }
 //     }
 //     return emptyArray2;
+
+
 //     //console.log(testArray.concat(emptyArray));
 var result = flatten(test);
 console.log(result); // Should print out [1, 2, 3, 4, [5], 6];
