@@ -2,10 +2,10 @@
 // Write a function to flatten an array by 1 level, i.e. given an array, your function should return an array whose elements are those of the given array and its subarrays, but ignore any subarrays of subarrays. See below for the example, and complete the flatten() function.
 var testArray = [1, [2, 3], [4, [5], 6]];
 var flatten = function(arr){
-        // arr = arr.reduce(function(a, b){
-        // return a.concat(b);
-        // },[]);
-        // return arr;
+    arr = arr.reduce(function(a, b){
+    return a.concat(b);
+    },[]);
+    return arr;
 
 }
 
@@ -30,7 +30,7 @@ var flatten = function(arr){
 
 
 //     //console.log(testArray.concat(emptyArray));
-var result = flatten(test);
+var result = flatten(testArray);
 console.log(result); // Should print out [1, 2, 3, 4, [5], 6];
 
 // Bonus: Flatten the array really hard. No matter how many sub-arrays it has, your function should return an array with no sub-arrays. E.g. flattenDeep(testArray) should return [1, 2, 3, 4, 5, 6].
@@ -66,4 +66,14 @@ console.log(result); // Should print out [1, 2, 3, 4, [5], 6];
 
 
 // DOM Manipulation Exercises: Write your code below for the next section.
+function changeRandomColor(){
+    var firstDiv = document.querySelector('div');
+    var x = Math.floor(Math.random() * 256);
+    var y = Math.floor(Math.random() * 256);
+    var z = Math.floor(Math.random() * 256);
+    var bgColor = "rgb(" + x + "," + y + "," + z + ")"; //remember to string out the value of x, y and z
+    firstDiv.style.backgroundColor = bgColor;
+    return firstDiv;
+}
+setTimeout(changeRandomColor, 3000);
 
